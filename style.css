@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+:root {
+  --pastel-pink: #ad8671;
+  --pastel-blue: #717dad;
+}
+
+.light-theme {
+  --default-bg: var(--pastel-pink);
+}
+
+.dark-theme {
+  --default-bg: var(--pastel-blue);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Experience */
+#experience {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+#experience-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Utilities */
+.hidden{
+    display: none;
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--default-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 12px solid white;
+  z-index: 1000;
+}
+
+.loading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 36px;
+}
+
+.enter-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 36px;
+  background: var(--default-bg);
+  border: 3px solid white;
+  padding: 8px 20px;
+  opacity: 0;
+}
+
+.enter-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--default-bg);
+}
+
+.instructions {
+  z-index: 1000;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 26px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal */
+.modal {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 700px;
+    background-color: #ad8671;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.modal-wrapper {
+    padding: 12px;
+}
+
+.modal-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-bg-overlay {
+  z-index: 750;
+  height: 100%;
+  width: 100%;
+  background-color: #31313159;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* Toggle Theme Button */
+.theme-mode-toggle-button {
+  z-index: 500;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background: var(--default-bg);
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease-in;
+  transition-delay: 0.1s;
+}
+
+/* Toggle Audio Button */
+.audio-toggle-button {
+  z-index: 500;
+  position: absolute;
+  top: 32px;
+  right: 96px;
+  background: var(--default-bg);
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease-in;
+  transition-delay: 0.1s;
+}
+
+.second-icon,
+.second-icon-two {
+  display: none;
+}
